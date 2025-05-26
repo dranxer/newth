@@ -1,0 +1,442 @@
+.heroSection {
+  width: 100vw;
+  min-height: 90vh;
+  background: linear-gradient(-45deg, #232b5b, #2d1e60, #1a237e, #311b92);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional: background dots/lines overlay */
+.heroSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/bg-dots.svg'); /* Add a subtle SVG or PNG for dots/lines */
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 0.1; }
+}
+
+.navbarSpace {
+  height: 80px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1300px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.leftContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+}
+
+.headline {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(120deg, #fff 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subheadline {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 600px;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.buttonArrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .buttonArrow {
+  transform: translateX(4px);
+}
+
+.ctaButton {
+  background: linear-gradient(90deg, #ff9800 0%, #43ea6d 100%);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 32px rgba(67, 234, 109, 0.18);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.ctaButton:hover::before {
+  left: 100%;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(255, 152, 0, 0.22);
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infographicCircle {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 60% 40%, #ffb347 0%, #ffcc80 100%);
+  border-radius: 50%;
+  box-shadow: 0 8px 40px rgba(255, 179, 71, 0.18);
+  border: 6px solid #ff9800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.centerIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+  padding: 28px;
+  box-shadow: 0 4px 24px rgba(255, 179, 71, 0.18), 0 0 0 8px rgba(255,152,0,0.10);
+  border: 3px solid #ffe0b2;
+  z-index: 2;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.stat {
+  position: absolute;
+  z-index: 3;
+}
+
+.statBox {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
+  padding: 20px 32px 12px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 130px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.statBox:hover {
+  transform: translateY(-5px);
+}
+
+.statBox img, .statBox svg {
+  margin-bottom: 6px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
+}
+
+/* Icon accent colors */
+.statBox img[alt*="Active Students"], .statBox svg[alt*="Active Students"] {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #ff7043;
+}
+.statBox img[alt*="Universities"], .statBox svg[alt*="Universities"] {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #43ea6d;
+}
+.statBox img[alt*="Internship"], .statBox svg[alt*="Internship"] {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #1976d2;
+}
+.statBox img[alt*="Events"], .statBox svg[alt*="Events"] {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #8e24aa;
+}
+
+.statNumber {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+/* Stat number colors */
+.statBox img[alt*="Active Students"] + .statNumber {
+  color: #ff7043;
+}
+.statBox img[alt*="Universities"] + .statNumber {
+  color: #43ea6d;
+}
+.statBox img[alt*="Internship"] + .statNumber {
+  color: #1976d2;
+}
+.statBox img[alt*="Events"] + .statNumber {
+  color: #8e24aa;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: #232b5b;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .heroContent {
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 0;
+    padding: 0 20px;
+  }
+
+  .leftContent {
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .headline {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .subheadline {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .rightContent {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .infographicCircle {
+    width: 320px;
+    height: 320px;
+    transform: scale(0.9);
+  }
+
+  .stat[style*="left: -80px"] {
+    left: -40px !important;
+  }
+  .stat[style*="right: -80px"] {
+    right: -40px !important;
+  }
+  .stat[style*="top: -40px"] {
+    top: -24px !important;
+  }
+  .stat[style*="bottom: -40px"] {
+    bottom: -24px !important;
+  }
+
+  .statBox {
+    min-width: 100px;
+    padding: 14px 16px 8px 16px;
+  }
+
+  .centerIcon {
+    padding: 20px;
+  }
+
+  .centerIcon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroSection {
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  .navbarSpace {
+    height: 60px;
+  }
+
+  .heroContent {
+    gap: 32px;
+  }
+
+  .headline {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .ctaButton {
+    font-size: 1.1rem;
+    padding: 14px 32px;
+  }
+
+  .infographicCircle {
+    width: 280px;
+    height: 280px;
+    transform: scale(0.8);
+  }
+
+  .stat {
+    transform: scale(0.9);
+  }
+
+  .stat[style*="left: -80px"] {
+    left: -30px !important;
+  }
+  .stat[style*="right: -80px"] {
+    right: -30px !important;
+  }
+  .stat[style*="top: -40px"] {
+    top: -20px !important;
+  }
+  .stat[style*="bottom: -40px"] {
+    bottom: -20px !important;
+  }
+
+  .statBox {
+    min-width: 90px;
+    padding: 12px 14px 6px 14px;
+  }
+
+  .statNumber {
+    font-size: 1.4rem;
+  }
+
+  .statLabel {
+    font-size: 0.9rem;
+  }
+
+  .centerIcon {
+    padding: 16px;
+  }
+
+  .centerIcon img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .headline {
+    font-size: 1.8rem;
+  }
+
+  .infographicCircle {
+    width: 240px;
+    height: 240px;
+    transform: scale(0.7);
+  }
+
+  .statBox {
+    min-width: 80px;
+    padding: 10px 12px 4px 12px;
+  }
+
+  .statNumber {
+    font-size: 1.2rem;
+  }
+
+  .statLabel {
+    font-size: 0.8rem;
+  }
+
+  .stat[style*="left: -80px"] {
+    left: -25px !important;
+  }
+  .stat[style*="right: -80px"] {
+    right: -25px !important;
+  }
+  .stat[style*="top: -40px"] {
+    top: -15px !important;
+  }
+  .stat[style*="bottom: -40px"] {
+    bottom: -15px !important;
+  }
+} 
