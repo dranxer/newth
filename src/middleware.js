@@ -6,7 +6,7 @@ export function middleware(request) {
   console.log('Middleware processing path:', path);
 
   // Define public paths that don't require authentication
-  const isPublicPath = path === '/login' || path === '/signup' || path.startsWith('/api/auth/');
+  const isPublicPath = path === '/' || path === '/login' || path === '/signup' || path.startsWith('/api/auth/');
   console.log('Is public path:', isPublicPath);
 
   // Get the token from the cookies
