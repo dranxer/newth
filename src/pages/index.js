@@ -338,11 +338,10 @@ function FullWidthEventsSlideshow() {
     { image: "/1.1.JPG", title: "Think India Convention 3.0" },
     { image: "/1.2.JPG", title: "Think India Convention 3.0" },
     { image: "/1.3.JPG", title: "Think India Convention 3.0" },
-    { image: "/2.1.JPG", title: "Chhatrapati Shivaji Jayanti" },
-    { image: "/2.2.JPG", title: "Chhatrapati Shivaji Jayanti" },
-    { image: "/2.3.JPG", title: "Chhatrapati Shivaji Jayanti" },
-    { image: "/3.1.jpg", title: "Rastramshala Workshop" },
-    { image: "/3.2.jpg", title: "Rastramshala Workshop" }
+    { image: "/2.1.png", title: "G20 Impact Summit" },
+    { image: "/2.2.jpg", title: "G20 Impact Summit" },
+    { image: "/3.1.jpg", title: "National Symposium" },
+    { image: "/3.2.jpg", title: "National Symposium" },
   ];
   const images = imageTitleMap.map(obj => obj.image);
   const [current, setCurrent] = useState(0);
@@ -368,7 +367,7 @@ function FullWidthEventsSlideshow() {
         src={images[current]}
         alt={`Event ${current + 1}`}
         fill
-        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+        style={{ objectFit: images[current] === '/3.2.jpg' ? 'contain' : 'cover', width: '100%', height: '100%' }}
         priority
       />
       {/* Event Title Overlay at Top */}

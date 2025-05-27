@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
+import styles from '../styles/Internships.module.css';
 
 // Example data structure for internships
 const internshipsData = [
@@ -115,6 +116,57 @@ export default function Internships() {
                 </div>
               </>
             )}
+          </div>
+        </section>
+
+        <section className={styles.overviewSection}>
+          <h2 className={styles.overviewTitle}>Internship Programs Overview</h2>
+          
+          <div className={styles.internshipCard}>
+            <h3>ANUBHOOTI</h3>
+            <p>Anubhooti meaning 'realization' is an opportunity to learn from the experiences of Social Leaders of the society – Real-Life Role Models – working at the grass-roots. This Social Internship Project of Think India in association with pioneering Social Organisations; aims to bring synergies among students of top-most institutes of India and crusaders working for a social change.</p>
+          </div>
+
+          <div className={styles.internshipCard}>
+            <h3>VIDHI</h3>
+            <p>"VIDHI" the Litigation Internship Program of Think India, is a medium for finest Young Law Students to connect and involve them with the diverse network of law practitioners striving for excellence in field of law and contribute in empowering society and citizens.</p>
+            <p>VIDHI aims at training and promoting a generation of lawyers and legal practitioners who are socially awakened. The program will help law students in understanding the procedural aspects and knowledge to excel in the profession along with serving the society and the nation.</p>
+          </div>
+
+          <div className={styles.internshipCard}>
+            <h3>VIDHI INTERNATIONAL LAW COMMISSION</h3>
+            <p>The VIDHI International Law Commission Internship is a highly prestigious and sought-after opportunity that allows exceptional law students to immerse themselves in the world of international legal discourse. Students selected for this elite program are granted the rare honor of working under the direct guidance of a Member Designate at the International Law Commission, Geneva a body at the forefront of shaping and codifying international law.</p>
+            <p>This unparalleled exposure provides interns with firsthand experience in global legal frameworks, diplomacy, and high-level research, offering an intellectually stimulating environment that few academic experiences can rival. It is a distinguished platform for aspiring international legal scholars to refine their skills, contribute to critical legal processes, and walk alongside some of the world's most influential legal minds.</p>
+          </div>
+
+          <div className={styles.internshipCard}>
+            <h3>NITI</h3>
+            <p>"NITI" the Public Policy Internship Program of Think India promotes research by connecting students with the research organisations and Think Tanks based in Delhi, Mumbai & Lucknow. NITI aims at generating policy makers and researchers of tomorrow who will know how to make good policies and analyze the impact of policies on the society.</p>
+            <p>NITI facilitates research, convergence of ideas, positions and visions that aspire to strengthen the nation and preserve her unity and integrity and contribute towards her progress and integral development.</p>
+          </div>
+
+          <div className={styles.internshipCard}>
+            <h3>SANSADIYA</h3>
+            <p>With changing learning patterns, the participation of Students in Legislative Policy Framework has risen. Bills are often put into the public forum for discussions and suggestions. Students in course of their Internship are assisting Members of Parliament on issues which are put forth for discussion in Parliament.</p>
+            <p>Think India, through SANSADIYA aims at creating a similar learning platform for student community through Internship with Members of Parliament and Ministers for One-Month and assist them with issues like Analysis of Bill, Drafting Questions.</p>
+          </div>
+
+          <div className={styles.internshipCard}>
+            <h3>SAMVAD</h3>
+            <p>Media is the fourth pillar in any democracy and journalists in today's age of information play a vital role in being the voice of those who go unheard. Confidence, commitment to truth & attention to detail are the qualities that journalists are required to possess. In a young aspirational nation like ours, it is the need of the hour to produce journalists who believe in fearless reporting.</p>
+            <p>Hence, the aim to provide a holistic journalism experience to young students along with, industry guidance.</p>
+          </div>
+
+          <div className={styles.internshipCard}>
+            <h3>SHURUAT</h3>
+            <p>For the economic growth of any country, Start-Ups pay a very vital role. They not only enhance the economic prosperity of a country but are a major source of job creation. In a developing country like India, which is poised to be in the top economies of the world, Start-Ups will play a significant role in wealth creation.</p>
+            <p>To help young innovators and entrepreneurs, Think India will have it is the first ever StartUp Internship program where students will be able to work and interact with successful Start-Ups across the country. This internship will help the interns understand the complexities of opening a Start-Up, the government support, fundraising; tax liabilities are other issues that Start-Ups in India face & how they overcome these hurdles to becomes a successful business entity.</p>
+          </div>
+
+          <div className={styles.internshipCard}>
+            <h3>DIKSHA</h3>
+            <p>The Deeksha Internship, a prestigious and transformative research initiative by Think India, stands as a gateway for the nation's brightest minds to engage in unparalleled academic and professional growth. This program forges powerful connections between driven students and renowned faculty from India's most esteemed institutions such as IISc, IITs, IIMs, NITs and NLUs offering an extraordinary opportunity to delve into groundbreaking research that shapes the future.</p>
+            <p>More than just an internship, Deeksha is a launchpad for ambitious scholars in STEM, Management, and Law, empowering them with hands-on experience, rigorous mentorship, and an immersive environment to hone their research acumen. It is a crucible where raw potential is transformed into intellectual excellence, preparing the next generation of leaders and innovators.</p>
           </div>
         </section>
       </div>

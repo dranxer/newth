@@ -117,7 +117,7 @@ export default function Hero() {
             <div className={styles.stat} style={{top: '50%', right: '-80px', transform: 'translateY(-50%)'}}>
               <div className={styles.statBox}>
                 <Image src="/university.svg" alt="Universities" width={32} height={32} />
-                <span className={styles.statNumber}>50+</span>
+                <span className={styles.statNumber}>15+</span>
                 <span className={styles.statLabel}>Universities</span>
               </div>
             </div>

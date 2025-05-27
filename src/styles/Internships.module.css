@@ -1,0 +1,67 @@
+.overviewSection {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.overviewTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #232b5b;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.internshipCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.internshipCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.internshipCard h3 {
+  color: #232b5b;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.internshipCard p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.internshipCard p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .overviewSection {
+    padding: 3rem 1rem;
+  }
+
+  .overviewTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .internshipCard {
+    padding: 1.5rem;
+  }
+
+  .internshipCard h3 {
+    font-size: 1.3rem;
+  }
+
+  .internshipCard p {
+    font-size: 1rem;
+  }
+} 

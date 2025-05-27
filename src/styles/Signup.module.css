@@ -23,6 +23,8 @@
 .clerkCard {
   box-shadow: none !important;
   background: transparent !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .clerkHeader {
@@ -48,6 +50,8 @@
   padding: 0.75rem !important;
   font-weight: 500 !important;
   transition: all 0.2s !important;
+  width: 100% !important;
+  margin-bottom: 1rem !important;
 }
 
 .socialButton:hover {
@@ -61,6 +65,7 @@
   padding: 0.75rem !important;
   font-weight: 600 !important;
   transition: all 0.2s !important;
+  width: 100% !important;
 }
 
 .primaryButton:hover {
@@ -81,9 +86,35 @@
 @media (max-width: 640px) {
   .container {
     padding: 1rem;
+    align-items: flex-start;
+    min-height: 100vh;
   }
   
   .card {
     padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+  }
+
+  .clerkHeader {
+    font-size: 1.5rem !important;
+  }
+
+  .clerkSubheader {
+    font-size: 0.9rem !important;
+  }
+
+  .socialButton {
+    padding: 0.6rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .primaryButton {
+    padding: 0.6rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .footerLink {
+    font-size: 0.9rem !important;
   }
 } 

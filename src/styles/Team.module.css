@@ -135,6 +135,15 @@
   font-weight: 500;
 }
 
+.photoCardCategoryHeading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .memberSocial {
   display: flex;
   gap: 15px;
