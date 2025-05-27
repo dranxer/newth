@@ -5,6 +5,10 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  reactStrictMode: true,
+  images: {
+    domains: ['img.clerk.com', 'images.clerk.dev'],
+  },
 };
 
 module.exports = nextConfig; 

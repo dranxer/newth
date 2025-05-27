@@ -1,16 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import UserIcon from "./UserIcon";
-import useCurrentUser from "../hooks/useCurrentUser";
+import { useState, useEffect, useRef } from "react";
+import { useUser, useClerk } from "@clerk/nextjs";
 import { useRouter } from "next/router";
 import styles from '../styles/Navbar.module.css';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const { user, loading } = useCurrentUser();
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const { user, isLoaded } = useUser();
+  const { signOut } = useClerk();
   const router = useRouter();
+  const userMenuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +35,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
+        setUserMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
@@ -48,19 +61,12 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch('/api/auth/logout', {
-        method: 'POST',
-        credentials: 'include',
-      });
-      setMenuOpen(false);
-      if (res.ok) {
-        router.push('/');
-        router.reload();
-      }
+      await signOut();
+      router.push('/');
     } catch (error) {
       console.error('Error logging out:', error);
-      setMenuOpen(false);
     }
+    setMenuOpen(false);
   };
 
   const handleSectionClick = (section) => {
@@ -70,6 +76,11 @@ export default function Navbar() {
       setActiveSection(section);
     }
     closeMenu();
+  };
+
+  const toggleUserMenu = (e) => {
+    e.stopPropagation();
+    setUserMenuOpen(!userMenuOpen);
   };
 
   return (
@@ -155,8 +166,33 @@ export default function Navbar() {
             </li>
           ))}
           <li className={styles.authButtons}>
-            {loading ? null : user ? (
-              <UserIcon />
+            {!isLoaded ? null : user ? (
+              <div className={styles.userMenu} ref={userMenuRef}>
+                <button className={styles.userButton} onClick={toggleUserMenu}>
+                  {user.imageUrl ? (
+                    <Image
+                      src={user.imageUrl}
+                      alt={user.fullName || 'User'}
+                      width={32}
+                      height={32}
+                      className={styles.userAvatar}
+                    />
+                  ) : (
+                    <div className={styles.userAvatar}>
+                      {user.fullName ? user.fullName.charAt(0).toUpperCase() : '?'}
+                    </div>
+                  )}
+                </button>
+                <div className={`${styles.userDropdown} ${userMenuOpen ? styles.show : ''}`}>
+                  <div className={styles.userInfo}>
+                    <p className={styles.userName}>{user.fullName}</p>
+                    <p className={styles.userEmail}>{user.primaryEmailAddress?.emailAddress}</p>
+                  </div>
+                  <button onClick={handleLogout} className={styles.logoutButton}>
+                    Sign Out
+                  </button>
+                </div>
+              </div>
             ) : (
               <>
                 <button onClick={handleLogin} className={styles.loginBtn} type="button">Login</button>
@@ -250,7 +286,7 @@ export default function Navbar() {
           ))}
         </ul>
         <div className={styles.sidebarAuth}>
-          {loading ? null : user ? (
+          {user ? (
             <button className={styles.sidebarSignout} onClick={handleLogout}>Sign out</button>
           ) : (
             <>

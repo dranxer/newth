@@ -69,6 +69,7 @@ export default async function handler(req, res) {
       JWT_SECRET,
       { expiresIn: '7d' }
     );
+    console.log('JWT token generated');
 
     // Set token as HTTP-only cookie with secure settings
     const cookieOptions = [
@@ -87,6 +88,7 @@ export default async function handler(req, res) {
       `token=${token}; ${cookieOptions.join('; ')}`,
       `user=${JSON.stringify({ id: user.id, name: user.name, email: user.email })}; ${cookieOptions.join('; ')}`
     ]);
+    console.log('Cookies set successfully');
 
     console.log('Signup successful for user:', email);
 
