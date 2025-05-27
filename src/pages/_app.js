@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import Router from 'next/router';
 import { initAnimations } from '../utils/animations';
 import { ClerkProvider } from '@clerk/nextjs';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -25,6 +26,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ClerkProvider {...pageProps}>
+      <Head>
+        <title>Think India</title>
+        <meta name="description" content="Think India - Empowering Youth for a Better Tomorrow" />
+        <link rel="icon" href="/think-india-logo.png" />
+      </Head>
       <Component {...pageProps} />
     </ClerkProvider>
   );
