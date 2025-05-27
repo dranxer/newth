@@ -49,13 +49,13 @@ export default function Outreach() {
                 <li>NIT Jalandhar</li>
                 <li>NIT Srinagar</li>
                 <li>NIT Manipur</li>
+                <li>NIT Surat</li>
               </ul>
             </div>
 
             <div className={styles.category}>
               <h2>Indian Institutes of Technology (IITs)</h2>
               <ul>
-                <li>IIT Surat</li>
                 <li>IIT Bhilai</li>
                 <li>IIT Dhanbad</li>
                 <li>IIT Patna</li>
