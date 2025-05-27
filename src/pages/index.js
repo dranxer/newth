@@ -339,7 +339,6 @@ function FullWidthEventsSlideshow() {
     { image: "/1.2.JPG", title: "Think India Convention 3.0" },
     { image: "/1.3.JPG", title: "Think India Convention 3.0" },
     { image: "/2.1.png", title: "G20 Impact Summit" },
-    { image: "/2.2.jpg", title: "G20 Impact Summit" },
     { image: "/3.1.jpg", title: "National Symposium" },
     { image: "/3.2.jpg", title: "National Symposium" },
   ];
@@ -369,6 +368,10 @@ function FullWidthEventsSlideshow() {
         fill
         style={{ objectFit: images[current] === '/3.2.jpg' ? 'contain' : 'cover', width: '100%', height: '100%' }}
         priority
+        onError={(e) => {
+          console.error(`Error loading image: ${images[current]}`);
+          e.target.style.display = 'none';
+        }}
       />
       {/* Event Title Overlay at Top */}
       <div style={{
