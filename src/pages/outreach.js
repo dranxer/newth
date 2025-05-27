@@ -50,6 +50,7 @@ export default function Outreach() {
                 <li>NIT Srinagar</li>
                 <li>NIT Manipur</li>
                 <li>NIT Surat</li>
+                <li>NIT Raipur</li>
               </ul>
             </div>
 
