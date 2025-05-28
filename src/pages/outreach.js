@@ -31,7 +31,7 @@ export default function Outreach() {
                 <li>National Law University, Odisha</li>
                 <li>Rajiv Gandhi National University of Law, Patiala</li>
                 <li>Ram Manohar Lohia National University of Law, Lucknow</li>
-                <li>chanakya National Law University, Patna</li>
+                <li>Chanakya National Law University, Patna</li>
                 <li>School of Planning and Architecture, New Delhi</li>
               </ul>
             </div>
