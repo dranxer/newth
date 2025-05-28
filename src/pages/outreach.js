@@ -26,12 +26,12 @@ export default function Outreach() {
               <h2>Law and Architecture Schools</h2>
               <ul>
                 <li>Maharashtra National Law University, Mumbai</li>
-                <li>Maharashtra National Law University, Sambhaji Nagar</li>
+                <li>Maharashtra National Law University,Chatrapati Sambhaji Nagar</li>
                 <li>Maharashtra National Law University, Nagpur</li>
                 <li>National Law University, Odisha</li>
                 <li>Rajiv Gandhi National University of Law, Patiala</li>
                 <li>Ram Manohar Lohia National University of Law, Lucknow</li>
-                <li>Chakravarthi National Law University, Patna</li>
+                <li>chanakya National Law University, Patna</li>
                 <li>School of Planning and Architecture, New Delhi</li>
               </ul>
             </div>
