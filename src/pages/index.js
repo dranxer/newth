@@ -249,31 +249,31 @@ export default function Home() {
 
             {/* Right Column: Contact Form */}
             <div style={{ 
-              flex: 1, 
-              minWidth: 300, 
-              maxWidth: 500,
-              background: 'rgba(255, 255, 255, 0.95)',
-              padding: '40px',
-              borderRadius: '999px',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
-              border: '2px solid',
-              borderImage: 'linear-gradient(to right, #FF9933, #fff, #138808) 1'
-            }}>
-              <iframe
-                src="https://tally.so/embed/mZD7xA?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1"
-                width="100%"
-                height="500"
-                frameBorder="0"
-                marginHeight="0"
-                marginWidth="0"
-                title="Contact Form"
-                style={{ 
-                  borderRadius: '12px',
-                  background: '#fff',
-                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)'
-                }}
-              ></iframe>
-            </div>
+  flex: 1, 
+  minWidth: 300, 
+  maxWidth: 500,
+  background: 'rgba(255, 255, 255, 0.95)',
+  padding: '40px',
+  borderRadius: '0', // <-- No rounding
+  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+  border: '2px solid',
+  borderImage: 'linear-gradient(to right, #FF9933, #fff, #138808) 1'
+}}>
+  <iframe
+    src="https://tally.so/embed/mZD7xA?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1"
+    width="100%"
+    height="500"
+    frameBorder="0"
+    marginHeight="0"
+    marginWidth="0"
+    title="Contact Form"
+    style={{ 
+      borderRadius: '0',   // <-- No rounding for iframe either
+      background: '#fff',
+      boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)'
+    }}
+  ></iframe>
+</div>
           </div>
         </section>
 
