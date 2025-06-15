@@ -253,7 +253,7 @@ export default function Home() {
   minWidth: 300, 
   maxWidth: 500,
   background: 'rgba(255, 255, 255, 0.95)',
-  padding: '40px',
+  padding: '20px',
   borderRadius: '999px', // <-- No rounding
   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
   border: '2px solid',
@@ -262,7 +262,7 @@ export default function Home() {
   <iframe
     src="https://tally.so/embed/mZD7xA?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1"
     width="100%"
-    height="500"
+    height="250"
     frameBorder="0"
     marginHeight="0"
     marginWidth="0"
