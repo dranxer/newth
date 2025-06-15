@@ -254,7 +254,7 @@ export default function Home() {
   maxWidth: 500,
   background: 'rgba(255, 255, 255, 0.95)',
   padding: '40px',
-  borderRadius: '0', // <-- No rounding
+  borderRadius: '999px', // <-- No rounding
   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
   border: '2px solid',
   borderImage: 'linear-gradient(to right, #FF9933, #fff, #138808) 1'
@@ -268,7 +268,7 @@ export default function Home() {
     marginWidth="0"
     title="Contact Form"
     style={{ 
-      borderRadius: '0',   // <-- No rounding for iframe either
+      borderRadius: '999px',   // <-- No rounding for iframe either
       background: '#fff',
       boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)'
     }}
