@@ -99,7 +99,6 @@ export default function Hero() {
           </p>
           <button className={styles.ctaButton}>
             Join Our Mission
-            <span className={styles.buttonArrow}>→</span>
           </button>
         </div>
         <div className={styles.rightContent}>
