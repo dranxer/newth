@@ -13,15 +13,6 @@ export default function Team() {
   ];
 
   // Define the list of Social Media & IT team members for the photo cards
-  const smItTeamMembers = [
-    { name: "Saket Sourav", position: "National SM & IT Convenor", img: "/saket.jpg", institute: "NLUJAA Guwahati" },
-    { name: "Manish", position: "National SM & IT Co-Convenor", img: "/manish.jpg", institute: "IIT Roorkee" },
-    { name: "Mansi Rathi", position: "National SM & IT Co-Convenor", img: "/mansi.jpg", institute: "MNIT Jaipur" },
-    { name: "Shivam Goyal", position: "National SM & IT Co-Convenor", img: "/shivam.jpg", institute: "Delhi" },
-    { name: "Dayal Mahato", position: "National SM & IT Co-Convenor", img: "/dayal.jpg", institute: "NIT Agartala" },
-    { name: "Sonia Kavade", position: "National SM & IT Co-Convenor", img: "/sonia.jpg", institute: "MNLU Nagpur" }
-  ];
-
   return (
     <>
       <Navbar />
