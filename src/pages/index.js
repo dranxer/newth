@@ -262,7 +262,7 @@ export default function Home() {
   <iframe
     src="https://tally.so/embed/mZD7xA?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1"
     width="100%"
-    height="250"
+    height="500"
     frameBorder="0"
     marginHeight="0"
     marginWidth="0"
