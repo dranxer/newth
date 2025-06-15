@@ -7,6 +7,7 @@ export default function Team() {
   const coreTeamMembers = [
     { name: "Sumit Pandey", position: "National Incharge", img: "/sumit.jpg", institute: "" },
     { name: "Akhansha Warade", position: "National Convenor", img: "/akhansha.jpg", institute: "IIM Mumbai" },
+    { name: "Vijay Prabhakar", position: "National Co-Convenor", img: "/vijay.png", institute: "IIT Delhi" },
     { name: "Sarthak Agrawal", position: "National Co-Convenor", img: "/sarthak_agrawal.png", institute: "NLU Jabalpur" },
     { name: "Sarthak Pandya", position: "National Co-Convenor", img: "/sarthak_pandya.jpg", institute: "IIT Kharagpur" },
     { name: "Muskan Lakhwani", position: "National Co-Convenor", img: "/muskan.jpg", institute: "IIT Tirupati" },
@@ -73,6 +74,7 @@ export default function Team() {
                 <tr className={styles.categoryRowOrange}><td colSpan="5">Core Team</td></tr>
                 <tr><td>1</td><td>Sumit Pandey</td><td>National Incharge</td><td></td><td>Lucknow</td></tr>
                 <tr><td>2</td><td>Akhansha Warade</td><td>National Convenor</td><td>IIT Mumbai</td><td>Mumbai</td></tr>
+                <tr><td>4</td><td>Vijay Prabhakar</td><td>National Co-Convenor</td><td>IIT Delhi</td><td>Delhi</td></tr>
                 <tr><td>3</td><td>Sarthak Agrawal</td><td>National Co-Convenor</td><td>NLU Jabalpur</td><td>Jabalpur</td></tr>
                 <tr><td>4</td><td>Sarthak Pandya</td><td>National Co-Convenor</td><td>IIT Roorkee</td><td>Roorkee</td></tr>
                 <tr><td>5</td><td>Muskan Lakhwani</td><td>National Co-Convenor</td><td>IIT Tirupati</td><td>Tirupati</td></tr>
