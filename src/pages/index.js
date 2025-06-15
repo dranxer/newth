@@ -254,7 +254,7 @@ export default function Home() {
               maxWidth: 500,
               background: 'rgba(255, 255, 255, 0.95)',
               padding: '40px',
-              borderRadius: '20px',
+              borderRadius: '999px / 40px',
               boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
               border: '2px solid',
               borderImage: 'linear-gradient(to right, #FF9933, #fff, #138808) 1'
