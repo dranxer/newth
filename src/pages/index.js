@@ -250,8 +250,8 @@ export default function Home() {
             {/* Right Column: Contact Form */}
            <div style={{ 
   position: 'relative',
-  minWidth: 300, 
-  maxWidth: 500,
+  minWidth: 600, 
+  maxWidth: 600,
   height: 600,
   background: 'rgba(255, 255, 255, 0.95)',
   padding: '0',
