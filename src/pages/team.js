@@ -54,31 +54,6 @@ export default function Team() {
         </div>
 
         {/* Social Media & IT */}
-        <h3 className={styles.photoCardCategoryHeading}>Social Media & IT</h3>
-        <div className={styles.membersContainer}>
-          {smItTeamMembers.map((member, idx) => (
-            <div key={idx} className={styles.memberCard}>
-              <div className={styles.memberImgContainer}>
-                <Image 
-                  src={member.img} 
-                  alt={member.name} 
-                  width={200} 
-                  height={200} 
-                  className={styles.memberImg} 
-                />
-                <div className={styles.tricolorBorder}>
-                  <div className={styles.borderSaffron}></div>
-                  <div className={styles.borderWhite}></div>
-                  <div className={styles.borderGreen}></div>
-                </div>
-              </div>
-              <h3 className={styles.memberName}>{member.name}</h3>
-              <p className={styles.memberPosition}>{member.position}</p>
-              <p className={styles.memberInstitute}>{member.institute}</p>
-            </div>
-          ))}
-        </div>
-
         {/* Tabulated Team Members */}
         <div className={styles.tableSection}>
           <h3 className={styles.tableTitle}>Think India National Team (2024-25)</h3>
