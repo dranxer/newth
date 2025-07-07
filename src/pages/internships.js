@@ -137,6 +137,8 @@ export default function Internships() {
             <h3>VIDHI INTERNATIONAL LAW COMMISSION</h3>
             <p>The VIDHI International Law Commission Internship is a highly prestigious and sought-after opportunity that allows exceptional law students to immerse themselves in the world of international legal discourse. Students selected for this elite program are granted the rare honor of working under the direct guidance of a Member Designate at the International Law Commission, Geneva a body at the forefront of shaping and codifying international law.</p>
             <p>This unparalleled exposure provides interns with firsthand experience in global legal frameworks, diplomacy, and high-level research, offering an intellectually stimulating environment that few academic experiences can rival. It is a distinguished platform for aspiring international legal scholars to refine their skills, contribute to critical legal processes, and walk alongside some of the world's most influential legal minds.</p>
+            <p>We assist in securing internships with distinguished legal professionals, including Senior Advocates, Assistant Solicitors General of India, Standing Counsels, and Advocates-on-Record — such as Dr. Vikramjit Banerjee, Mahesh Jethmalani, Archana Pathak Dave, Aishwarya Bhati, Pallav Mongia, and many others. We are proud to provide internship opportunities across 20+ locations in India with seasoned advocates practicing in diverse fields of law.
+            </p>
           </div>
 
           <div className={styles.internshipCard}>
