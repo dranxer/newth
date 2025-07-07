@@ -74,10 +74,10 @@ export default function Team() {
                 <tr className={styles.categoryRowOrange}><td colSpan="5">Core Team</td></tr>
                 <tr><td>1</td><td>Sumit Pandey</td><td>National Incharge</td><td></td><td>Lucknow</td></tr>
                 <tr><td>2</td><td>Akhansha Warade</td><td>National Convenor</td><td>IIM Mumbai</td><td>Mumbai</td></tr>
-                <tr><td>4</td><td>Sarthak Agrawal</td><td>National Co-Convenor</td><td>NLU Jabalpur</td><td>Jabalpur</td></tr>
-                <tr><td>5</td><td>Sarthak Pandya</td><td>National Co-Convenor</td><td>IIT Roorkee</td><td>Roorkee</td></tr>
-                <tr><td>6</td><td>Muskan Lakhwani</td><td>National Co-Convenor</td><td>IIT Tirupati</td><td>Tirupati</td></tr>
-                <tr><td>3</td><td>Vijay Prabhakar</td><td>National Co-Convenor</td><td>IIT Delhi</td><td>Delhi</td></tr>
+                <tr><td>3</td><td>Sarthak Agrawal</td><td>National Co-Convenor</td><td>NLU Jabalpur</td><td>Jabalpur</td></tr>
+                <tr><td>4</td><td>Sarthak Pandya</td><td>National Co-Convenor</td><td>IIT Roorkee</td><td>Roorkee</td></tr>
+                <tr><td>5</td><td>Muskan Lakhwani</td><td>National Co-Convenor</td><td>IIT Tirupati</td><td>Tirupati</td></tr>
+                <tr><td>6</td><td>Vijay Prabhakar</td><td>National Co-Convenor</td><td>IIT Delhi</td><td>Delhi</td></tr>
                 {/* Social Media & IT */}
                 <tr className={styles.categoryRowBlue}><td colSpan="5">Social Media & IT</td></tr>
                 <tr><td>6</td><td>Saket Sourav</td><td>National SM & IT Convenor</td><td>NLUJA Guwahati</td><td>Guwahati</td></tr>
