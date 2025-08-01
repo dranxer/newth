@@ -315,6 +315,7 @@ export default function Home() {
                 <a href="https://www.facebook.com/ThinkIndiaOrg/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
                 <a href="https://x.com/thinkindiaorg" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
                 <a href="https://www.youtube.com/thinkindiaorg" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                <a href="mailto:thinkindiamail@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-envelope"></i></a>
               </div>
             </div>
           </div>
